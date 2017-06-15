@@ -1,5 +1,5 @@
 /**
- * tutorial helloworld
+ * tutorials-cpp helloworld
  * main.cpp
  * Purpose: Try out www.tutorialspoint.com tutorial on C++
  *

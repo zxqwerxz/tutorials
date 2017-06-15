@@ -1,5 +1,5 @@
 /**
- * tutorial helloworld
+ * tutorials-cpp helloworld
  * main.h
  * Purpose: Header file for main.cpp
  *
