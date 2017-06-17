@@ -15,6 +15,7 @@
  */
 
 #include <iostream>
+#include <string>
 #include "main.hpp"
 using namespace std;
 
@@ -28,6 +29,9 @@ int main() {
   print_constants_literals();
   print_modifier_types();
   print_storage_classes();
+  print_functions();
+  print_arrays();
+  print_strings();
 
   return 0;
 }
@@ -125,4 +129,57 @@ void test_static_variable() {
   i++;
   cout << "i is " << i;
   cout << " and count is " << counter << endl;
+}
+
+int max(int num1, int num2);
+void print_functions() {
+  int a = 100;
+  int b = 200;
+  int ret;
+
+  ret = max(a, b);
+  cout << "Max value is: " << ret << endl;
+}
+int max(int num1, int num2 = 20) {
+  int result;
+  if (num1 > num2) {
+    result = num1;
+  } else {
+    result = num2;
+  }
+  return result;
+}
+
+void print_arrays() {
+  double balance[10];
+
+  for (int i = 0; i < 10; i++) {
+    balance[i] = i + 100;
+  }
+
+  // More things:
+  // C++ supports multidimensional arrays
+
+  // Arrays can be passed to functions, but in reality
+  // it is a pointer to the array that is passed.
+  // ex: run_function(balance);
+  // balance (without the index) is a pointer to the first
+  // element of the array.
+}
+
+void print_strings() {
+  string str1 = "Hello";
+  string str2 = "World";
+  string str3;
+
+  // copy str1 into str3
+  str3 = str1;
+  cout << "str3: " << str3 << endl;
+
+  // concatenate
+  str3 = str1 + str2;
+  cout << "str1 + str2: " << str3 << endl;
+
+  // string length
+  cout << "str3.size(): " << str3.size() << endl;
 }
