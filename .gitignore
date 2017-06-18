@@ -1,2 +1,5 @@
 a.out
+*.o
+*.h5
 .DS_Store
+*.txt
